@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import Damnagoras
+import print_python_is_cool
