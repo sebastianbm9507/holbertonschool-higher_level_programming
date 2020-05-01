@@ -2,13 +2,13 @@
 if __name__ == '__main__':
     import sys
 # printing the number of argv 🔢 #
-    args_number = len(sys.argv) - 1
+    args_number = len(sys.argv)
 # checking 0 arguments  ✅#
     if args_number == 1:
-        print("{:d} argument:".format(len(sys.argv) - 1))
+        print("0 argument.")
 # checking 1 argument 🟢 #
     elif args_number == 2:
-        print("{:d} argument: 11".format(len(sys.argv) - 1))
+        print("{:d} argument:".format(len(sys.argv) - 1))
 # there is more than 2 arguments 🟣 #
     else:
         print("{:d} arguments:".format(len(sys.argv) - 1))
