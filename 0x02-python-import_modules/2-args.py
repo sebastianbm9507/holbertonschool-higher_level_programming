@@ -5,10 +5,10 @@ if __name__ == '__main__':
     args_number = len(sys.argv) - 1
 # checking 0 arguments  ✅#
     if args_number == 1:
-        print("{:d} arguments.".format(len(sys.argv) - 1))
+        print("{:d} argument:".format(len(sys.argv) - 1))
 # checking 1 argument 🟢 #
     elif args_number == 2:
-        print("{:d} argument:".format(len(sys.argv) - 1))
+        print("{:d} argument: 11".format(len(sys.argv) - 1))
 # there is more than 2 arguments 🟣 #
     else:
         print("{:d} arguments:".format(len(sys.argv) - 1))
