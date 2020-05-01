@@ -15,5 +15,5 @@ if __name__ == '__main__':
 # going throug list ✅#
     for i in range(len(sys.argv)):
         if i == 0:
-            continue:
+            continue
         print("{:d}: {:s}".format(i, sys.argv[i]))
