@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
+    # checking if sentence 🈂️
     if sentence:
-        return len(sentence), sentence[0]
+        tuple = len(sentence), sentence[0]
     else:
-        sentence[0].append(None)
-        return len(sentence), sentence[0]
+        tuple = len(sentence), None
+    return (tuple)
