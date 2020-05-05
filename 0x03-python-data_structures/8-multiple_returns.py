@@ -3,4 +3,5 @@ def multiple_returns(sentence):
     if sentence:
         return len(sentence), sentence[0]
     else:
-        return sentence = none
+        sentence[0].append(None)
+        return len(sentence), sentence[0]
