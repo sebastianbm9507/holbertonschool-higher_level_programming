@@ -8,7 +8,7 @@ This module creates a new class Square
 
 class Square:
     """ __init__ method class """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
             self.__size = size
             self.__position = position
 
@@ -33,26 +33,31 @@ class Square:
 
     def my_print(self):
         """ Print a square """
+
+        pos = self.__position
+        siz = self.__size
         if self.__size is 0:
             print("")
         else:
-            for m in range(0, self.__position[1]):
+            for _ in range(pos[1]):
                 print("")
-            for i in range(0, self.__size):
-                for k in range(0, self.__position[0]):
-                    print(" ", end="")
-                for j in range(0, self.__size):
-                    print('#', end="")
+            for _ in range(siz):
+                for j in range(siz + pos[0]):
+                    if j < pos[0]:
+                        print(" ", end='')
+                    else:
+                        print("#", end='')
                 print("")
 
     @property
     def position(self):
         """ Return position """
+
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Setv value """
+        """Set value """
 
         if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
