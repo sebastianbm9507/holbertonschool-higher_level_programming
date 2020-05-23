@@ -3,13 +3,15 @@
 
 
 def text_indentation(text):
-    temp_text = ''
-    """
-    Function that prints a text
+    """Function that indent a text
 
-    Args:
-        text (str): Text given by the user.
+    Arguments:
+        text {string} -- Texto to be indented
+
+    Raises:
+        TypeError: text must be a string
     """
+    temp_text = ''
     if type(text) != str:
         raise TypeError("text must be a string")
 
