@@ -97,5 +97,6 @@ class Rectangle:
             string = ""
             for _ in range(self.__height):
                 string += "#" * self.__width
-                string += "\n"
+                if _ < self.__height -1:
+                    string += "\n"
         return string
