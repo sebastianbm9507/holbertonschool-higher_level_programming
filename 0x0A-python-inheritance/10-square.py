@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-    Module that creates a BaseGeometry class
+    Module that creates a Square class
 """
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """[summary]
+    """ Square class
 
     Arguments:
-        Rectangle {[type]} -- [description]
+        Rectangle -> Parent class
     """
     def __init__(self, size):
         self.integer_validator("size", size)
