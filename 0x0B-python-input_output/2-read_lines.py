@@ -11,7 +11,7 @@ def read_lines(filename="", nb_lines=0):
         filename (str, optional): [description]. Defaults to "".
         nb_lines (int, optional): [description]. Defaults to 0.
     """
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding="utf-8") as file:
         n_lines = 0
         for lines in file:
             n_lines += 1
