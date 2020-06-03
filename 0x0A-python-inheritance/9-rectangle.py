@@ -7,18 +7,18 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """[summary]
+    """ Create a class Rectangle
 
     Arguments:
-        BaseGeometry {[type]} -- [description]
+        BaseGeometry -> Parent class
     """
 
     def __init__(self, width, height):
-        """[summary]
+        """ init method
 
         Arguments:
-            width ->
-            height ->
+            width -> Width of rectangle (int)
+            height -> Height of rectangle (int)
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
