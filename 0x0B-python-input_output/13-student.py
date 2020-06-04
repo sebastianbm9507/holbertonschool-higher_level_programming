@@ -47,9 +47,9 @@ class Student:
             return (new_dict)
 
         def reload_from_json(self, json):
-        """Reload a dicto from json 
-        Args:
-            json (json): json file
-        """
-        for key, value in json.items():
-            self.__dict__[key] = value
+            """Reload a dicto from json
+                Args:
+                    json (json): json file
+            """
+            for key, value in json.items():
+                self.__dict__[key] = value
