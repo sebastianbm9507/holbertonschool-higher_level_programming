@@ -34,7 +34,7 @@ class Student:
         """
 
         new_dict = {}
-        if attrs == None:
+        if attrs is None:
             return (self.__dict__)
         if type(attrs) == list:
             for element in attrs:
