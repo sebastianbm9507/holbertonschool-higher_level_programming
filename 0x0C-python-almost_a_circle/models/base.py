@@ -54,7 +54,7 @@ class Base:
         if list_objs is not None:
             for obj in list_objs:
                 data.append(obj.to_dictionary())
-            with open(file_name, 'w+') as file:
+            with open(file_name, 'w+', encoding="utf-8") as file:
                 file.write(cls.to_json_string(data))
         else:
             file.write(data)
