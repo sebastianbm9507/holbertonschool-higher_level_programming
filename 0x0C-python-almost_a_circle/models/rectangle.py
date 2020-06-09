@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Rectangle class
 """
@@ -120,3 +121,56 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    # Public methods
+
+    def area(self):
+        """
+        Function that calculate the area of a rectangle
+
+        Returns:
+            int: area
+        """
+        return (self.__width * self.__height)
+
+    def display(self):
+        """
+        Display the rectangle
+        """
+        for _ in range(self.__y):
+            print("")
+        for pos in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * (self.__width))
+
+    def update(self, *args, **kwargs):
+        """Update attributes for rectangle
+        """
+        if args is not () and args is not None:
+            attr_names = ["id", "width", "height", "x", "y"]
+            for index, attr in enumerate(args):
+                setattr(self, attr_names[index], attr)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def __str__(self):
+        """__str__ method
+
+        Returns:
+            str: String format
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                self.__y, self.__width, self.__height))
+
+    def to_dictionary(self):
+        """Represent object in dictionary
+
+        Returns:
+            dict: Dictionary representation
+        """
+        new_dictionary = {}
+        for key, value in self.__dict__.items():
+            new_dictionary[key.split("__")[-1]] = value
+        return new_dictionary
