@@ -5,6 +5,7 @@ Module for base class
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -102,3 +103,33 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        save to file CSV
+        """
+        lists = []
+        if len(list_objs) is not 0:
+            for i in list_objs:
+                lists.append(i.to_dictionary())
+        dicts = cls.to_json_string(lists)
+
+        with open(cls.__name__ + ".csv", "w+") as my_file:
+            my_file.write(dicts)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        returns a list of instances
+        """
+        try:
+            with open(cls.__name__ + ".csv", "r") as my_file:
+                read = my_file.read()
+                lists = Base.from_json_string(read)
+                create = []
+                for i in lists:
+                    create.append(cls.create(**i))
+                return create
+        except IOError:
+            return []
