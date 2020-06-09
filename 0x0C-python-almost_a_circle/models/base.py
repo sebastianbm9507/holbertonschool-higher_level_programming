@@ -44,18 +44,18 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Save python object to json
-
+        """save_to_file method that writes the json string representation of
+        list_obts to a file.
         Args:
-            list_objs (list): List ob python objects
+            list_objs ([list of objects]): list of cls instances
         """
-        data = []
-        file_name = cls.__name__ + ".json"
+        python_dict = []
+        filename = cls.__name__ + ".json"
         if list_objs is not None:
-            for obj in list_objs:
-                data.append(obj.to_dictionary())
-            with open(file_name, 'w+', encoding="utf-8") as file:
-                file.write(cls.to_json_string(data))
+            for x in list_objs:
+                python_dict.append(x.to_dictionary())
+        with open(filename, "w+", encoding="utf-8") as file:
+                file.write(cls.to_json_string(python_dict))
 
     @classmethod
     def create(cls, **dictionary):
