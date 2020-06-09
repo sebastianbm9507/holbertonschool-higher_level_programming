@@ -179,5 +179,3 @@ class Rectangle(Base):
         for key, value in self.__dict__.items():
             new_dictionary[key.split("__")[-1]] = value
         return new_dictionary
-
-
