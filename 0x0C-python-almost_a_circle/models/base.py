@@ -56,8 +56,6 @@ class Base:
                 data.append(obj.to_dictionary())
             with open(file_name, 'w+', encoding="utf-8") as file:
                 file.write(cls.to_json_string(data))
-        else:
-            file.write(data)
 
     @classmethod
     def create(cls, **dictionary):
