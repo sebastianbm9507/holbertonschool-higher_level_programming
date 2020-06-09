@@ -24,9 +24,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    """
-    Properties
-    """
+    # Getters
 
     @property
     def width(self):
@@ -53,9 +51,7 @@ class Rectangle(Base):
         """
         return self.__y
 
-    """
-    Setters
-    """
+    # Setters
 
     @width.setter
     def width(self, width):
@@ -125,9 +121,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
-    """
-    Public methods
-    """
+    # Public methods
 
     def area(self):
         """
