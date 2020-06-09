@@ -106,30 +106,34 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """save_to_file method that writes the json string representation of
+        list_obts to a file.
+        Args:
+            list_objs ([list of objects]): list of cls instances
         """
-        save to file CSV
-        """
-        lists = []
-        if len(list_objs) is not 0:
-            for i in list_objs:
-                lists.append(i.to_dictionary())
-        dicts = cls.to_json_string(lists)
-
-        with open(cls.__name__ + ".csv", "w+") as my_file:
-            my_file.write(dicts)
+        python_dict = []
+        filename = cls.__name__ + ".csv"
+        if list_objs is not None:
+            for x in list_objs:
+                python_dict.append(x.to_dictionary())
+        with open(filename, "w+", encoding="utf-8") as file:
+                file.write(cls.to_json_string(python_dict))
 
     @classmethod
     def load_from_file_csv(cls):
+        """Loads json from file
+
+        Returns:
+            list: List of dictionaries (instances)
         """
-        returns a list of instances
-        """
-        try:
-            with open(cls.__name__ + ".csv", "r") as my_file:
-                read = my_file.read()
-                lists = Base.from_json_string(read)
-                create = []
-                for i in lists:
-                    create.append(cls.create(**i))
-                return create
-        except IOError:
+        file_name = cls.__name__ + ".csv"
+        list = []
+        if not os.path.exists(file_name):
             return []
+        else:
+            with open(file_name, 'r', encoding="utf-8") as file:
+                data = file.read()
+                list_dict = cls.from_json_string(data)
+            for dict in list_dict:
+                list.append(cls.create(**dict))
+            return list
