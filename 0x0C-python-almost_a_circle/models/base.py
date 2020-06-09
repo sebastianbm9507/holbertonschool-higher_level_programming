@@ -24,9 +24,10 @@ class Base:
         Returns:
             json: python object
         """
-        data = []
-        if json_string is not None:
+        if json_string is not "" and json_string is not None:
             return json.loads(json_string)
+        else:
+            return []
 
     @staticmethod
     def to_json_string(list_dictionaries):
