@@ -68,10 +68,14 @@ class Square(Rectangle):
         self.height = size
 
     def __str__(self):
-        """String representation of square
-
-        Returns:
-            string: representation of square
         """
-        return "[Square] ({}) {}/{} - {}\
-        ".format(self.id, self.x, self.y, self.width)
+        String magic
+        Returns:
+            string
+        """
+        id = str(self.id)
+        x = str(self.x)
+        y = str(self.y)
+        size = str(self.width)
+        string = "[Square] (" + id + ") " + x + "/" + y + " - " + size
+        return string
