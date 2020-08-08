@@ -30,7 +30,7 @@ if __name__ == "__main__":
     _query = session.query(State).\
         filter(State.name.contains('a')).\
         delete(synchronize_session='fetch')
-    """   
+    """
     ℹ️ Another way to do it
     result = session.query(State).all()
     # for record in result:
