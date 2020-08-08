@@ -30,10 +30,7 @@ if __name__ == "__main__":
 
     # Query docs
     # ℹ️ https://docs.sqlalchemy.org/en/13/orm/query.html
-    result_query = session.query(State).filter_by(State.name == word_to_match).first()
-    if result_query:
-        print(result_query.id)
-    else:
-        print("Not found")
+    result_query = session.query(State).filter(State.name == word_to_match).first()
+    print(result_query.id if result_query else "Not found")
     # Close session
     session.close()
