@@ -32,7 +32,7 @@ if __name__ == "__main__":
     query = session.query(State).order_by(State.id).all()
 
     for value in query:
-        if 'a' in value:
+        if 'a' in value.name:
             print("{}: {}".format(value.id, value.name))
     # Close session
     session.close()
