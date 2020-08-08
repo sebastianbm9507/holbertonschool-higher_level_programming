@@ -28,5 +28,6 @@ if __name__ == "__main__":
     session = Session()
     # Query
     session.query(State).filter(State.id == 2)
-    .update({State.name: 'New Mexico'})
+    .update({State.name: 'New Mexico'}, synchronize_session = False)
     session.commit()
+    session.close()
