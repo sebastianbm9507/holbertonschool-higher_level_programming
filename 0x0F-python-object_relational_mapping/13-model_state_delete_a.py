@@ -26,13 +26,16 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     # Create the session
     session = Session()
-    # Query
-    result = session.query(State).all()
+    # Query and delete instant
     _query = session.query(State).\
         filter(State.name.contains('a')).\
         delete(synchronize_session='fetch')
+    """   
+    ℹ️ Another way to do it
+    result = session.query(State).all()
     # for record in result:
     #     if 'a' in record.name:
     #         session.delete(record)
+    """
     session.commit()
     session.close()
