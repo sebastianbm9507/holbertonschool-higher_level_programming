@@ -29,10 +29,10 @@ if __name__ == "__main__":
 
     # Query docs
     # ℹ️ https://docs.sqlalchemy.org/en/13/orm/query.html
-    query = session.query(State).all()
+    query = session.query(State).first()
 
     if query:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(query.id, query.name))
     else:
         print("Nothing")
     # Close session
