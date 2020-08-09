@@ -23,6 +23,7 @@ if __name__ == "__main__":
                     'mysql+mysqldb://{}:{}@localhost/{}'
                     .format(user, passw, database), pool_pre_ping=True
                     )
+    Base.metadata.create_all(engine)
     # create the session instant and bind the engine
     Session = sessionmaker(bind=engine)
     # Create the session
@@ -34,3 +35,4 @@ if __name__ == "__main__":
     # ✅ When add the city automatically add the state too
     session.add(new_city)
     session.commit()
+    session.close()
