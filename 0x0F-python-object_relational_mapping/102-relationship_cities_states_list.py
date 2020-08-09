@@ -32,5 +32,5 @@ if __name__ == "__main__":
     _query = session.query(City).order_by(City.id)
     # Going through each object in _query ✅
     for obj in _query:
-        print("{}: {} -> {}".format(obj.id, obj.name, obj.state.id))
+        print("{}: {} -> {}".format(obj.id, obj.name, obj.state.name))
     session.close()
