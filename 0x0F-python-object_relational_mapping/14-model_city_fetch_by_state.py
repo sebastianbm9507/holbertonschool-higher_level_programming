@@ -28,8 +28,7 @@ if __name__ == "__main__":
     # Create the session
     session = Session()
     # Query instant
-    _query = session.query(City, State).filter(City.state_id == State.id).all()
+    _query = session.query(City, State).filter(City.state_id == State.id)
     # Going through each object in _query ✅
     for cities, states in _query:
         print("{}: ({}) {}".format(states.name, cities.id, cities.name))
-    print()
