@@ -35,4 +35,5 @@ if __name__ == "__main__":
         print("{}:  {}".format(obj_states.id, obj_states.name))
         for city in obj_states.cities:
             print("     {}: {}".format(city.id, city.name))
+    session.commit()
     session.close()
