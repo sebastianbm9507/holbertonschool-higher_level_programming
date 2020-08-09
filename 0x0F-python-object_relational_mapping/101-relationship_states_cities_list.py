@@ -32,8 +32,7 @@ if __name__ == "__main__":
     _query = session.query(State).order_by(State.id)
     # Going through each object in _query ✅
     for obj_states in _query:
-        print("{}:  {}".format(obj_states.id, obj_states.name))
+        print("{}: {}".format(obj_states.id, obj_states.name))
         for city in obj_states.cities:
             print("    {}: {}".format(city.id, city.name))
-    session.commit()
     session.close()
