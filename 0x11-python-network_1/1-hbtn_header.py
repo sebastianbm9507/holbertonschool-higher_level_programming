@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Read header of a request """
+
+
 import urllib.request
 import sys
 
