@@ -9,5 +9,5 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
     email = sys.argv[2]
-    result = requests.post('https://httpbin.org/post', data = {'email': email})
+    result = requests.post(url, {'email': email})
     print(result.text)
