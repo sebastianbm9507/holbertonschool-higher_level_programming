@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Error code with requests """
 
 if __name__ == '__main__':
     import requests
