@@ -12,9 +12,8 @@ if __name__ == "__main__":
         values = {'q': sys.argv[1]}
     else:
         values = {'q': ""}
-        url = 'http://0.0.0.0:5000/search_user'
     # POST REQUEST
-    result = requests.post(url, data=values)
+    result = requests.post('http://0.0.0.0:5000/search_user', data=values)
     if result.headers.get('content-type') == 'application/json':
         if not result.json():
             print("No result")
