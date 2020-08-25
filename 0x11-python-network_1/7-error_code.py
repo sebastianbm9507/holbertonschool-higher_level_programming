@@ -10,6 +10,6 @@ if __name__ == '__main__':
     url = sys.argv[1]
     try:
         result = requests.get(url)
-        print('Error code: {}', result)
+        print(result.text)
     except Exception as error:
-        print('Error code: {}'.format(error))
+        print('Error code: {}'.format(error.status_code))
