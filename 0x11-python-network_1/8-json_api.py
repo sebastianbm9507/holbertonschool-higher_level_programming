@@ -12,7 +12,8 @@ if __name__ == "__main__":
         dic = {'q': argv[1]}
     else:
         dic = {'q': ""}
-    response = requests.post("http://0.0.0.0:5000/search_user", dic)
+        url = "http://0.0.0.0:5000/search_user"
+    response = requests.post(url, dic)
     if "json" not in response.headers.get('content-type'):
         print("Not a valid JSON")
     else:
@@ -21,5 +22,3 @@ if __name__ == "__main__":
                   response.json().get('name')))
         else:
             print("No result")
-
-
