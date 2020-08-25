@@ -14,7 +14,7 @@ if __name__ == "__main__":
         values = {'q': ""}
         url = 'http://0.0.0.0:5000/search_user'
     # POST REQUEST
-    result = requests.post(url, values)
+    result = requests.post(url, data=values)
     if result.headers.get('content-type') == 'application/json':
         if not result.json():
             print("No result")
