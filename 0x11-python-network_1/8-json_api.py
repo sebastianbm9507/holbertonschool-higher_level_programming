@@ -9,10 +9,10 @@ from sys import argv
 if __name__ == "__main__":
 
     if len(argv) > 1:
-        dict['q'] = argv[1]
+        dic = {'q': argv[1]}
     else:
-        dict = {'q': ""}
-    response = requests.post("http://0.0.0.0:5000/search_user", dict)
+        dic = {'q': ""}
+    response = requests.post("http://0.0.0.0:5000/search_user", dic)
     if "json" not in response.headers.get('content-type'):
         print("Not a valid JSON")
     else:
