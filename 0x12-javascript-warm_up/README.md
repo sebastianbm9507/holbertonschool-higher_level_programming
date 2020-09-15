@@ -96,5 +96,5 @@ What you should learn from this project:
 
 ---
 
-## Author
+## Author 🏌🏻
 * **** - [sebastianbm9507](https://github.com/sebastianbm9507)
