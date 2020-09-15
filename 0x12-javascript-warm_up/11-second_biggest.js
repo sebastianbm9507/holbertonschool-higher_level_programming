@@ -2,7 +2,8 @@
 if (!process.argv[2] || process.argv.length === 3) {
   console.log(0);
 } else {
-  const [a, b, ...array] = process.argv.sort();
+  const array = process.argv.slice(2, process.argv.length).sort();
+  // using spread operator 🍒
+  // let [a, b, ...array] = process.argv.sort();
   console.log(array[array.length - 2]);
 }
-
