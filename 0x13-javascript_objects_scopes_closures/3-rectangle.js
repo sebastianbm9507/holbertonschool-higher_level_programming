@@ -5,11 +5,12 @@ module.exports = class Rectangle {
     if ((w !== 0 && h !== 0) && (w > 0 && h > 0)) {
       this.width = w;
       this.height = h;
-      this.print = (width, height) => {
-        for (let i = 0; i < height; i++) {
-          console.log('X'.repeat(width));
-        }
-      };
+    }
+  }
+
+  print (width, height) {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
   }
 };
