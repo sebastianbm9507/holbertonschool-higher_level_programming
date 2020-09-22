@@ -1,12 +1,12 @@
 #!/usr/bin/node
 // computes a dictionary of user ids by occurrence.
-const { dictImpo } = require('./101-data');
+const { dict } = require('./101-data');
 const newdict = {};
-for (const key in dictImpo) {
-  if (dictImpo[key] in newdict) {
-    newdict[dictImpo[key]].push(key);
+for (const key in dict) {
+  if (dict[key] in newdict) {
+    newdict[dict[key]].push(key);
   } else {
-    newdict[dictImpo[key]] = [key];
+    newdict[dict[key]] = [key];
   }
 }
 console.log(newdict);
