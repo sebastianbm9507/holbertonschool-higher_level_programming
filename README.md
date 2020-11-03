@@ -38,6 +38,12 @@ This repository contains projects on the Python programming and javascript langu
 
 Thanks to this I have build solid skills with this languajes and have confident making products with them. 👨🏻‍💻
 
+
+
+<h3 align="center">Languages and Tools:</h3>
+<p align="center"> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg" alt="css3" width="60" height="60"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg" alt="html5" width="60" height="60"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="60" height="60"/> </a> </p>
+
+
 ## Projects :page_with_curl:
 1. [0x00. Python - Hello, World](./0x00-python-hello_world)
 2. [0x01. Python - if/else, loops, functions](./0x01-python-if_else_loops_functions)
